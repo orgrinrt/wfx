@@ -1,0 +1,18 @@
+[package]
+name = "wfx-runtime"
+version = "0.0.1"
+edition = "2024"
+description = "WFX runtime"
+license-file = "LICENSE"
+readme = "README.md"
+authors = ["orgrinrt <orgrinrt@ikiuni.dev>", "Hiisi Digital Oy <hey@hiisi.digital>"]
+rust-version = "1.87.0"
+keywords = ["game-engine", "wfx", "gamedev"]
+
+[[bin]]
+name = "wfx"
+path = "src/main.rs"
+
+[dependencies]
+log.workspace = true # the workspace version has some specific features set for slight optimisations
+bevy.workspace = true # to ensure matching features across crates TODO: later on, we'll optimize these to only the ones we need
