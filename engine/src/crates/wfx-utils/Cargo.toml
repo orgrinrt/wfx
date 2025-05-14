@@ -1,0 +1,16 @@
+[package]
+name = "wfx-utils"
+version = "0.0.1"
+edition = "2024"
+description = "WFX utils"
+license-file = "LICENSE"
+readme = "README.md"
+authors = ["orgrinrt <orgrinrt@ikiuni.dev>", "Hiisi Digital Oy <hey@hiisi.digital>"]
+rust-version = "1.87.0"
+keywords = ["utils", "wfx"]
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+log.workspace = true # the workspace version has some specific features set for slight optimisations

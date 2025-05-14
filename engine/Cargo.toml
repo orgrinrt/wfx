@@ -1,0 +1,30 @@
+[workspace]
+members = [
+    "./src/core",
+    "./src/runtime",
+    "./src/crates/*",
+]
+resolver = "2" # TODO: once bevy and other key deps requiring 2 are updated, switch to 3
+
+[workspace.dependencies]
+log = { version = "*", features = ["max_level_debug", "release_max_level_warn"] } # slightly more effiicient release builds
+bevy = { version = "0.16.0", features = ["dynamic_linking", "experimental_pbr_pcss", "async-io", "async_executor"] }
+
+[profile.dev]
+codegen-backend = "cranelift" # NOTE: might be unstable on macos
+opt-level = 1
+
+[profile.dev.package."*"]
+codegen-backend = "llvm"
+opt-level = 3
+
+[profile.release]
+codegen-backend = "llvm"
+codegen-units = 1
+lto = "thin"
+
+[profile.wasm-release]
+codegen-backend = "llvm"
+inherits = "release"
+opt-level = "z" # or `s`
+strip = "debuginfo"

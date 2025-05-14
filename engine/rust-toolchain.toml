@@ -1,0 +1,2 @@
+[toolchain]
+channel = "nightly" # NOTE: pin to a version after the general impls are stabilized engine-side
