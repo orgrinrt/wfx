@@ -2,7 +2,7 @@
 name = "wfx-utils"
 version = "0.0.1"
 edition = "2024"
-description = "WFX utils"
+description = "Utilities for the wfx game engine"
 license-file = "LICENSE"
 readme = "README.md"
 authors = ["orgrinrt <orgrinrt@ikiuni.dev>", "Hiisi Digital Oy <hey@hiisi.digital>"]
