@@ -7,7 +7,9 @@ members = [
 resolver = "2" # TODO: once bevy and other key deps requiring 2 are updated, switch to 3
 
 [workspace.dependencies]
-log = { version = "*", features = ["max_level_debug", "release_max_level_warn"] } # slightly more effiicient release builds
+# a version requirement, because crates.io rejects a wildcard server-side even though a local
+# dry-run accepts it. The features trim the log levels compiled into a release build.
+log = { version = "0.4", features = ["max_level_debug", "release_max_level_warn"] }
 bevy = { version = "0.16.0", features = ["dynamic_linking", "experimental_pbr_pcss", "async-io", "async_executor"] }
 
 [profile.dev]
