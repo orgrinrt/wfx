@@ -2,9 +2,11 @@
 name = "wfx-utils"
 version = "0.0.1"
 edition = "2024"
-description = "WFX utils"
-license-file = "LICENSE"
+description = "Utilities for the wfx game engine"
+license = "MPL-2.0"
 readme = "README.md"
+repository = "https://github.com/orgrinrt/wfx"
+homepage = "https://github.com/orgrinrt/wfx"
 authors = ["orgrinrt <orgrinrt@ikiuni.dev>", "Hiisi Digital Oy <hey@hiisi.digital>"]
 rust-version = "1.87.0"
 keywords = ["utils", "wfx"]
